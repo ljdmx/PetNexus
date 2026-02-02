@@ -1,0 +1,94 @@
+:root {
+  /* Divine Palette - More depth and vibrancy */
+  --color-brand-primary: #3d5a52;
+  /* Deeper Sage */
+  --color-brand-secondary: #52796f;
+  /* Medium Sage */
+  --color-brand-light: #84a59d;
+  /* Light Sage */
+  --color-brand-accent: #ffb4a2;
+  /* Soft Peach Accent (New) */
+  --color-bg-base: #faf9f6;
+  /* Lighter, cleaner warm white */
+  --color-bg-surface: #ffffff;
+  --color-text-main: #22333b;
+  /* Darker, higher contrast */
+  --color-text-muted: #5e6472;
+
+  /* Gradations */
+  --grad-premium: linear-gradient(135deg, #3d5a52 0%, #52796f 100%);
+  --grad-soft: linear-gradient(180deg, rgba(253, 250, 246, 0) 0%, #fdfaf6 100%);
+
+  /* Spacing & Borders */
+  --radius-sm: 12px;
+  --radius-md: 20px;
+  --radius-lg: 32px;
+  --radius-full: 9999px;
+
+  /* Shadows - More layered and natural */
+  --shadow-sm: 0 4px 12px rgba(61, 90, 82, 0.05);
+  --shadow-md: 0 12px 32px rgba(61, 90, 82, 0.08);
+  --shadow-lg: 0 24px 64px rgba(61, 90, 82, 0.12);
+
+  --transition-premium: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background-color: var(--color-bg-base);
+  color: var(--color-text-main);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Glassmorphism Utility */
+.glass {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px) saturate(180%);
+  -webkit-backdrop-filter: blur(12px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.container {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+.section-padding {
+  padding: 120px 0;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-bg-base);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-brand-light);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-brand-secondary);
+}

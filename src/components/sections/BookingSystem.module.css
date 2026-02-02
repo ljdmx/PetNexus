@@ -1,0 +1,267 @@
+.bookingSection {
+    background: transparent;
+    padding: 100px 0;
+}
+
+.bookingCard {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-radius: 40px;
+    padding: 0;
+    box-shadow:
+        0 40px 100px -20px rgba(82, 121, 111, 0.15),
+        0 0 1px 0 rgba(0, 0, 0, 0.05);
+    max-width: 1000px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.cardHeader {
+    background: #fbfcfb;
+    padding: 40px 60px;
+    border-bottom: 1px solid rgba(82, 121, 111, 0.05);
+    position: relative;
+}
+
+.indicatorStrip {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, #52796f, #84a98c);
+    opacity: 0.1;
+}
+
+.stepIndicator {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+}
+
+.step {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    opacity: 0.3;
+    transition: all 0.5s cubic-bezier(0.2, 0, 0, 1);
+}
+
+.stepActive {
+    opacity: 1;
+}
+
+.stepNumber {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: white;
+    border: 2px solid #52796f;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.85rem;
+    font-weight: 800;
+    color: #52796f;
+    transition: all 0.5s cubic-bezier(0.2, 0, 0, 1);
+}
+
+.stepActive .stepNumber {
+    background: #52796f;
+    color: white;
+    box-shadow: 0 5px 15px rgba(82, 121, 111, 0.3);
+}
+
+.stepCompleted .stepNumber {
+    background: #84a98c;
+    border-color: #84a98c;
+    color: white;
+}
+
+.stepLabel {
+    font-size: 0.9rem;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+    color: #2d453e;
+}
+
+.formWrapper {
+    padding: 60px;
+    min-height: 420px;
+    position: relative;
+    overflow: hidden;
+}
+
+.stepContent {
+    width: 100%;
+}
+
+.categoryTitle {
+    margin-bottom: 48px;
+    text-align: center;
+}
+
+.categoryTitle h3 {
+    font-size: 2rem;
+    color: #2d453e;
+    font-weight: 800;
+    margin-bottom: 12px;
+}
+
+.categoryTitle p {
+    color: var(--color-text-muted);
+    font-size: 1.1rem;
+}
+
+.serviceOptions {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+.serviceOption {
+    padding: 32px;
+    background: white;
+    border-radius: 24px;
+    border: 1px solid rgba(82, 121, 111, 0.08);
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.2, 0, 0, 1);
+    position: relative;
+}
+
+.serviceOption:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px -10px rgba(82, 121, 111, 0.12);
+    border-color: rgba(82, 121, 111, 0.2);
+}
+
+.serviceOptionSelected {
+    background: #f4f8f6;
+    border-color: #52796f;
+    box-shadow: 0 10px 30px -5px rgba(82, 121, 111, 0.1);
+}
+
+.serviceIcon {
+    width: 64px;
+    height: 64px;
+    background: #f8faf9;
+    color: #52796f;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s ease;
+}
+
+.serviceOptionSelected .serviceIcon {
+    background: #52796f;
+    color: white;
+}
+
+.serviceInfo {
+    display: flex;
+    flex-direction: column;
+}
+
+.serviceLabel {
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: #2d453e;
+    margin-bottom: 4px;
+}
+
+.serviceSub {
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+    font-weight: 600;
+}
+
+.selectedTick {
+    margin-left: auto;
+    color: #52796f;
+}
+
+.formGrid {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.label {
+    font-size: 0.75rem;
+    font-weight: 800;
+    color: #2d453e;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 12px;
+    display: block;
+}
+
+.input,
+.select {
+    width: 100%;
+    padding: 18px 24px;
+    background: #f8faf9;
+    border: 1px solid rgba(82, 121, 111, 0.1);
+    border-radius: 16px;
+    font-family: inherit;
+    font-size: 1.05rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.input:focus,
+.select:focus {
+    outline: none;
+    background: white;
+    border-color: #52796f;
+    box-shadow: 0 0 0 4px rgba(82, 121, 111, 0.1);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+}
+
+.actions {
+    padding: 32px 60px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+@media (max-width: 768px) {
+    .serviceOptions {
+        grid-template-columns: 1fr;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .stepIndicator {
+        gap: 20px;
+    }
+
+    .cardHeader {
+        padding: 32px 24px;
+    }
+
+    .formWrapper {
+        padding: 40px 24px;
+    }
+
+    .actions {
+        padding: 0 24px 40px;
+    }
+}

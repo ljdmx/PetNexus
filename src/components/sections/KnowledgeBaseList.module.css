@@ -1,0 +1,118 @@
+.section {
+    background-color: var(--color-bg-base);
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.title {
+    font-size: 3.5rem;
+    color: var(--color-brand-primary);
+    margin-bottom: 24px;
+}
+
+/* Search Bar */
+.searchContainer {
+    max-width: 600px;
+    margin: 0 auto 48px;
+    position: relative;
+}
+
+.searchInput {
+    width: 100%;
+    padding: 20px 60px 20px 24px;
+    border-radius: var(--radius-full);
+    border: 1px solid rgba(82, 121, 111, 0.1);
+    background: white;
+    box-shadow: var(--shadow-md);
+    font-size: 1.1rem;
+    transition: var(--transition-premium);
+}
+
+.searchInput:focus {
+    outline: none;
+    border-color: var(--color-brand-primary);
+    box-shadow: var(--shadow-lg);
+}
+
+.searchIcon {
+    position: absolute;
+    right: 24px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--color-brand-primary);
+}
+
+/* Categories */
+.categories {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 60px;
+    flex-wrap: wrap;
+}
+
+.categoryBtn {
+    padding: 10px 24px;
+    border-radius: var(--radius-full);
+    background: white;
+    border: 1px solid rgba(82, 121, 111, 0.1);
+    color: var(--color-text-muted);
+    font-weight: 600;
+    transition: var(--transition-premium);
+}
+
+.categoryBtn:hover,
+.categoryActive {
+    background: var(--color-brand-primary);
+    color: white;
+    border-color: var(--color-brand-primary);
+    box-shadow: var(--shadow-sm);
+}
+
+/* Featured Article */
+.featured {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 48px;
+    background: white;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+    margin-bottom: 80px;
+    align-items: center;
+}
+
+.featuredImage {
+    aspect-ratio: 16/10;
+    background: var(--color-bg-base);
+}
+
+.featuredContent {
+    padding: 48px;
+}
+
+.featuredContent h2 {
+    font-size: 2.25rem;
+    color: var(--color-brand-primary);
+    margin-bottom: 20px;
+}
+
+/* Article Grid */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 32px;
+}
+
+@media (max-width: 968px) {
+    .featured {
+        grid-template-columns: 1fr;
+    }
+
+    .featuredContent {
+        padding: 32px;
+    }
+}

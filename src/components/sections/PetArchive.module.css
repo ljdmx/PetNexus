@@ -1,0 +1,221 @@
+.archiveSection {
+    background-color: transparent;
+    padding: 0;
+}
+
+.passport {
+    width: 100%;
+    height: 100%;
+    background: white;
+    border-radius: 24px;
+    overflow: hidden;
+    position: relative;
+    box-shadow:
+        0 10px 40px -10px rgba(82, 121, 111, 0.15),
+        0 0 1px 1px rgba(82, 121, 111, 0.05);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.4s cubic-bezier(0.2, 0, 0, 1);
+    border: 1px solid rgba(82, 121, 111, 0.08);
+}
+
+.passport:hover {
+    transform: translateY(-5px);
+}
+
+/* Vertical Accent Stripe */
+.accentStripe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 8px;
+    background: linear-gradient(to bottom, var(--color-brand-primary), var(--color-brand-secondary));
+}
+
+.passportHeader {
+    background: #2d453e;
+    /* Darker, more professional tone */
+    color: white;
+    padding: 20px 24px 20px 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.headerTitle {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.syncIcon {
+    color: #a3b18a;
+    display: flex;
+}
+
+.headerLabel {
+    font-size: 0.8rem;
+    font-weight: 800;
+    letter-spacing: 0.15em;
+    opacity: 0.9;
+}
+
+.syncStatus {
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: #a3b18a;
+    background: rgba(163, 177, 138, 0.1);
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+
+.passportBody {
+    padding: 24px 20px 32px 24px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.mainInfo {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.photoContainer {
+    position: relative;
+}
+
+.photoInner {
+    width: 100px;
+    aspect-ratio: 1/1.2;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    background: var(--color-bg-base);
+    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.02);
+}
+
+.petPhoto {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: saturate(0.9) contrast(1.05);
+}
+
+.securityStamp {
+    position: absolute;
+    bottom: -10px;
+    right: -10px;
+    background: white;
+    padding: 4px 8px;
+    border-radius: 6px;
+    box-shadow: var(--shadow-sm);
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    border: 1px solid rgba(82, 121, 111, 0.1);
+}
+
+.securityStamp span {
+    font-size: 0.6rem;
+    font-weight: 900;
+    color: var(--color-brand-primary);
+}
+
+.securityStamp svg {
+    color: #10b981;
+}
+
+.details {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.field label {
+    font-size: 0.65rem;
+    font-weight: 800;
+    color: var(--color-text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    display: block;
+    margin-bottom: 4px;
+    white-space: nowrap;
+}
+
+.value {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--color-brand-primary);
+    line-height: 1.2;
+}
+
+.statsRow {
+    display: flex;
+    gap: 12px;
+    margin-top: 8px;
+}
+
+.smallField label {
+    font-size: 0.6rem;
+    font-weight: 700;
+    color: var(--color-text-muted);
+    display: block;
+    margin-bottom: 2px;
+    white-space: nowrap;
+}
+
+.smallValue {
+    font-size: 0.9rem;
+    font-weight: 800;
+    color: var(--color-text-main);
+}
+
+.footerInfo {
+    border-top: 1px dashed rgba(82, 121, 111, 0.15);
+    padding-top: 24px;
+    margin-top: auto;
+}
+
+.upcomingField {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+    background: rgba(82, 121, 111, 0.03);
+    padding: 16px;
+    border-radius: 12px;
+}
+
+.footerIcon {
+    color: var(--color-brand-primary);
+    opacity: 0.6;
+    margin-top: 2px;
+}
+
+.footerContent label {
+    font-size: 0.6rem;
+    font-weight: 700;
+    color: var(--color-brand-secondary);
+    display: block;
+    margin-bottom: 4px;
+}
+
+.footerValue {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--color-text-main);
+}
+
+@media (max-width: 480px) {
+    .mainInfo {
+        grid-template-columns: 1fr;
+    }
+
+    .photoInner {
+        width: 100%;
+        aspect-ratio: 16/9;
+    }
+}
